@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_sqs_queue" "terraform_queue" {
-  name= "terraform-example-queue"
+  name= "terraform-example-queue-${count.index}"
 
   count = 1
   
